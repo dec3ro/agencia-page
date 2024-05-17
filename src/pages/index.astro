@@ -1,0 +1,20 @@
+---
+import About from "../components/About.astro";
+import Layout from "../layouts/Layout.astro";
+import Principal from "../components/Principal.astro";
+import Service from "../components/Service.astro";
+import Footer from "../components/Footer.astro";
+import Redes from "../components/Redes.astro";
+import Pricing from "../components/Pricing.astro";
+import { Head } from "../components/Head";
+---
+
+<Layout title="Decero Branding - Desarrollo web - Social Media">
+  <Head client:load />
+  <Principal />
+  <About />
+  <Service />
+  <Pricing />
+  <Footer />
+  <Redes />
+</Layout>

@@ -1,0 +1,65 @@
+---
+const plans = [
+  {
+    title: 'BASIC',
+    descriptions: [
+      'Obtenga una sólida presencia en Facebook e Instagram con un enfoque estratégico en el contenido, junto con una campaña mensual para aumentar la visibilidad y el compromiso con su audiencia en línea.'
+    ],
+    price: 750,
+    link: 'https://wa.me/946365840?text=Hola+quiero+informacion+sobre+el+plan+basic'
+  },
+  {
+    title: 'PROFESSIONAL',
+    descriptions: [
+      'Optimice su presencia digital. Este plan ofrece una estrategia integral para destacar en diversas plataformas, proporcionando herramientas especializadas para maximizar su impacto y conectar de manera efectiva con su audiencia'
+    ],
+    price: 950,
+    link: 'https://wa.me/946365840?text=Hola+quiero+informacion+sobre+el+plan+profesional'
+  },
+  {
+    title: 'ULTIMATE',
+    descriptions: [
+      'Alcance el máximo potencial de su marca. Con una combinación estratégica de servicios en redes sociales, diseño web y un enfoque sólido en el branding, este plan le proporciona las herramientas necesarias para diferenciarce y sobresalir en el mundo digital.'
+    ],
+    price: 1300,
+    link: 'https://wa.me/946365840?text=Hola+quiero+informacion+sobre+el+plan+ultimate'
+  }
+]
+---
+
+<section class="xl:mx-32 xl:mb-24 mt-10 xl:p-10" id="pricing">
+  <section
+    class="flex justify-between items-start flex-wrap xl:gap-4 my-6 mx-4"
+  >
+    {
+      plans.map((plan, index) => (
+        <article
+          class={`flex justify-start dark:text-white items-start flex-col border dark:border-stone-700 p-6 xl:w-[30%] h-[380px] rounded dark:bg-[#272727] text-stone-900 xl:my-0 my-4 bg-white ${index === 1 ? 'relative shadow-xl xl:scale-110' : ''}`}
+        >
+          <div
+            class={` bg-gradient-to-br from-emerald-400 to-blue-400 px-6 py-3 rounded-md absolute left-1/2 -translate-x-1/2 ${index === 1 ? '' : 'hidden'} -top-6 dark:border dark:border-stone-900 dark:text-stone-900 text-white font-bold`}
+          >
+            Más popular
+          </div>
+          <div class="my-4">
+            <h1 class="text-lg text-start font-bold">{plan.title}</h1>
+          </div>
+          <ul class="flex gap-2 flex-col text-lg">
+            {plan.descriptions.map((description) => (
+              <p class="flex justify-start items-center gap-3">{description}</p>
+            ))}
+          </ul>
+          <div class="h-full w-full flex justify-center items-end py-2">
+            <a
+              href={plan.link}
+              class="dark:bg-stone-900/50 bg-gradient-to-tr from-emerald-300 to-blue-400 text-white font-bold w-full py-4 rounded active:translate-y-1 transition-all flex justify-center items-center"
+              target="_blank"
+            >
+              Consultar Precio
+            </a>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+</section>

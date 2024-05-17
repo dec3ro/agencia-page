@@ -1,0 +1,47 @@
+---
+import "../styles/grilla.css";
+const resources = [
+  {
+    image: "meros_img_1.webp",
+    title: "Tekashi alitas BBQ",
+    logo: "logo_meros.png",
+    isDark: false,
+  },
+  {
+    image: "meros_img_2.webp",
+    title: "Los meros mero - tacos",
+    logo: "logo_meros_dark.png",
+    isDark: true,
+  },
+  {
+    image: "makis_img_1.webp",
+    title: "Don Sushi",
+    logo: "logo_meros.png",
+    isDark: false,
+  },
+];
+---
+
+<div class="xl:mx-32 xl:my-8 xl:py-10 rounded-md mx-4">
+  <article class="grilla">
+    {
+      resources.map((resource) => (
+        <figure class="w-full relative cursor-pointer group overflow-hidden xl:max-h-[580px] 2xl:max-h-[750px]">
+          <div class="absolute flex justify-center items-center h-full w-full z-40">
+            <img
+              src={`${resource.logo}`}
+              alt=""
+              loading="lazy"
+              class="w-[250px] opacity-0 group-hover:opacity-70 transition-all duration-700"
+            />
+          </div>
+          <img
+            src={`/${resource.image}`}
+            alt=""
+            class="w-full h-full object-cover rounded-md group-hover:scale-105 transition-all duration-500 overflow-hidden"
+          />
+        </figure>
+      ))
+    }
+  </article>
+</div>

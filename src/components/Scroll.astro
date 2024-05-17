@@ -1,0 +1,59 @@
+<article
+  id="scroller"
+  class="border border-transparent max-w-full px-5 flex justify-center items-end animate-fade-in py-2"
+>
+  <section
+    id="container"
+    class="flex justify-start items-start gap-5 px-[10px]"
+  >
+    <img src="/meros_img_2.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/meros_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_2.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_3.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/meros_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+  </section>
+  <section
+    id="container"
+    class="flex justify-start items-start gap-5 px-[10px]"
+  >
+    <img src="/meros_img_2.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/meros_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_2.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_3.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/meros_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+  </section>
+  <section
+    id="container"
+    class="flex justify-start items-start gap-5 px-[10px]"
+  >
+    <img src="/meros_img_2.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/meros_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_2.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/makis_img_3.webp" alt="" class="h-[320px] md:h-[460px]"/>
+    <img src="/meros_img_1.webp" alt="" class="h-[320px] md:h-[460px]"/>
+  </section>
+</article>
+
+<style>
+  #container {
+    animation: scroll_left 30s linear infinite;
+  }
+
+  img {
+    object-fit: cover;
+    min-width: 355px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 4px solid #496f8a;
+  }
+
+  @keyframes scroll_left {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+</style>

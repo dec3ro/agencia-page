@@ -1,0 +1,53 @@
+---
+import Facebook from "../icons/Facebook.astro";
+import Instagram from "../icons/Instagram.astro";
+import Whatsapp from "../icons/Whatsapp.astro";
+---
+
+<aside
+  class="flex justify-center items-center fixed bottom-12 right-6 flex-col-reverse group"
+>
+  <div
+    class="bg-[#25D366] p-3 rounded-full cursor-pointer absolute right-4 z-10"
+  >
+    <a href="https://wa.me/970617559?text=Hola+quiero+informacion+sobre+los+productos+y+promociones" target="_blank">
+      <Whatsapp />
+    </a>
+  </div>
+  <div
+    class="gradient-instagram p-3 rounded-full cursor-pointer font-bold absolute -bottom-7 right-4 transition-all group-hover:opacity-100 group-hover:bottom-9 z-0 duration-700"
+  >
+    <a href="https://www.instagram.com/agenciadecero/" target="_blank">
+      <Instagram />
+    </a>
+  </div>
+  <div
+    class="gradient-messenger p-3 rounded-full cursor-pointer flex justify-center items-center absolute right-4 -bottom-7 transition-all group-hover:opacity-100 group-hover:bottom-[100px] z-0 duration-700"
+  >
+    <a href="https://www.facebook.com/profile.php?id=61556494837799&locale=es_LA" target="_blank">
+      <Facebook />
+    </a>
+  </div>
+</aside>
+
+<style>
+  .gradient-instagram {
+    background-image: linear-gradient(
+      45deg,
+      #405de6,
+      #5851db,
+      #833ab4,
+      #c13584,
+      #e1306c,
+      #fd1d1d,
+      #f56040,
+      #f77737,
+      #fcaf45,
+      #ffdc80
+    );
+  }
+
+  .gradient-messenger {
+    background-image: linear-gradient(to left, #00c6ff, #0072ff);
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+import Scroll from './Scroll.astro'
+---
+
+<main
+  class="xl:mt-[78px] xl:px-[150px] 2xl:h-[calc(100vh-78px)] relative font-mono overflow-hidden mt-[90px]"
+>
+  <section class="w-full animate-fade-in-up px-6 flex justify-between items-center flex-col h-full pb-5">
+    <article>
+      <h1
+        class="xl:text-[18vw] 2xl:text-[21vw] text-9xl leading-[100px] font-Solstice text-center xl:leading-[200px] 2xl:leading-[320px] animated-text overflow-hidden w-full"
+      >
+        AGENCIA DECERO
+      </h1>
+      <div
+        class="px-5 text-center my-3 xl:flex xl:justify-center xl:items-center h-auto"
+      >
+        <span
+          class="font-bold xl:h-[40px] xl:text-2xl 2xl:text-4xl mx-1 uppercase first-text xl:text-center text-xl xl:w-[60%] 2xl:w-full text-balance"
+        >
+        </span>
+      </div>
+    </article>
+    <section
+      class="flex justify-between items-end px-10 2xl:h-[500px] xl:h-[375px]"
+    >
+      <Scroll />
+    </section>
+  </section>
+</main>
+
+<style>
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-text {
+    background: linear-gradient(
+      to right,
+      #6ee7b7,
+      #60a5fa,
+      #6ee7b7,
+      #60a5fa,
+      #6ee7b7,
+      #60a5fa
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientAnimation 5s ease infinite;
+  }
+</style>
+
+<script>
+  import Typed from 'typed.js'
+  const typed = new Typed('.first-text', {
+    strings: [
+      'Desatamos tu marca hacia el éxito seguro.',
+      'Elevamos tu marca con estrategias seguras y efectivas.'
+    ],
+    typeSpeed: 20,
+    showCursor: false
+  })
+</script>

@@ -1,0 +1,56 @@
+---
+const services = [
+  {
+    tittle: 'Branding',
+    description:
+      'En Decero, entendemos que el branding es el corazón de toda estrategia de éxito. Trabajamos para potenciar tu marca y destacarla en el mercado con diseño innovador y estrategias efectivas.'
+  },
+  {
+    tittle: 'Desarrollo Web',
+    description:
+      'Trabajamos en la creación de sitios web impactantes y estrategias digitales efectivas para que tu negocio se destaque en el mercado digital.'
+  },
+  {
+    tittle: 'Social Media',
+    description:
+      'Creamos estrategias de marketing en redes sociales innovadoras que conectan con tu audiencia y generan resultados tangibles.'
+  }
+]
+---
+
+<article
+  class="xl:dark:bg-[#222222] xl:bg-tulip-300 xl:mx-32 xl:my-24 xl:p-10 rounded-md relative text-white"
+  id="services"
+>
+  <div
+    class="2xl:w-[300px] xl:w-[230px] h-[25px] absolute dark:bg-[#222222] bg-tulip-300 left-0 -top-5 rounded-t-md -z-20 xl:block hidden"
+  >
+  </div>
+  <div
+    class="2xl:w-[300px] xl:w-[100%] h-[30px] absolute dark:bg-[#262626] bg-tulip-400 left-5 -top-7 rounded-t-md -z-30 xl:block hidden"
+  >
+  </div>
+  <div
+    class="xl:w-[97%] 2xl:h-[30px] xl:h-[500px] absolute dark:bg-[#272727] bg-tulip-400 left-5 -top-3 rounded-md -z-40 xl:block hidden"
+  >
+  </div>
+  <h1
+    class="xl:text-5xl text-2xl xl:text-start text-center xl:text-white dark:text-white text-black font-bold"
+  >
+    NUESTROS SERVICIOS
+  </h1>
+  {
+    services.map((service, index) => (
+      <section
+        class={`dark:hover:bg-[#b3b3b3] dark:text-white hover:bg-tulip-400 xl:text-white text-black xl:bg-transparent bg-slate-100 dark:bg-neutral-800 group hover:text-stone-800 xl:mx-0 mx-4 p-4 transition-all flex xl:justify-evenly justify-center items-center xl:flex-row flex-col cursor-pointer xl:hover:scale-110 xl:py-10 xl:border-hidden border-dashed xl:my-0 my-4 border-2 ${index === 1 ? 'border-t border-b' : ''}`}
+      >
+        <div class="w-fit xl:text-4xl font-bold flex-grow basis-0 uppercase text-2xl xl:my-0 my-3">
+          {service.tittle}
+        </div>
+        <p class="xl:max-w-[600px] xl:text-xl font-semibold">
+          {service.description}
+        </p>
+      </section>
+    ))
+  }
+</article>

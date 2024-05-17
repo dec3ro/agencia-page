@@ -1,0 +1,15 @@
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 750px;
+  gap: 20px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .grilla {
+    grid-template-columns: 1fr;
+    grid-template-rows: 550px;
+    grid-auto-rows: 550px;
+  }
+}
